@@ -29,7 +29,8 @@ angular.module('brushfire_videosPage').controller('PageCtrl', ['$scope', '$timeo
     }, 3000);
 
     $scope.submitNewVideo = function() {
-      if ($scope.busySubmittingVideo) {
+
+      if ($scope.busySubmittingVideo || !$scope.newVideoSrc || !$scope.newVideoTitle) {
         return;
       }
 
